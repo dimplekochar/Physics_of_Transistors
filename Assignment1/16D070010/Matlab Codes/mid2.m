@@ -1,0 +1,11 @@
+Vg=-1.5;
+epsi=12*8.89*10^-14;
+KbTq=0.025;
+ni=10^10;
+q=1.6*10^-19;
+Cox=4*8.89*10^-14/(2*10^-7);
+co=sqrt(0.5*epsi*KbTq*q*ni);
+k1=1/0.025;
+psi=linspace(-0.8, 0.3, 100);
+C=co.*(k1.*(exp(k1.*psi)-exp(-k1.*psi)))./(exp(k1.*psi)+exp(-k1.*psi)-2);
+plot(psi, abs(C));
